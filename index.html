@@ -21,6 +21,10 @@
 			background: none !important;
 			padding: 0 !important;
 		}
+
+		.portfolioSiteItem img {
+			object-position: top;
+		}
 	</style>
 	<link rel="stylesheet" id="wp-block-library-css" href="css/ZhhvHGERJgoH.css" type="text/css" media="all">
 	<link rel="stylesheet" id="wp-block-library-theme-css" href="css/e2JvRw7m78fW.css" type="text/css" media="all">
@@ -82,8 +86,8 @@
 
 					<li class="main-menu__item main-menu__item--big"><a class="main-menu__link" href="/">
 							<span>Головна</span> </a> </li>
-					<li class="main-menu__item main-menu__item--big"> <a class="main-menu__link"
-							href="#"> <span>Про нас</span> </a> </li>
+					<li class="main-menu__item main-menu__item--big"> <a class="main-menu__link" href="#"> <span>Про
+								нас</span> </a> </li>
 					<li class="main-menu__item main-menu__item--big"><a class="main-menu__link scroll" href="#services">
 							<span>Послуги</span> </a> </li>
 					<li class="main-menu__item main-menu__item--big"><a class="main-menu__link" href="#">
@@ -332,10 +336,15 @@
 						<div class="portfolioListTwo">
 							<!-- Item -->
 							<div class="portfolio-item-wrapper">
-								<a href="#" class="portfolioSiteItem">
+								<a href="#" class="portfolioSiteItem" onclick="openPopup('./templates/cafe/index.html')">
 									<img src="images/cafe.jpg" alt="CAFE">
-									<div class="portfolioSiteInfo"
-										style="background-image:url('images/cafe.jpg');background-size: contain;background-position: center;background-repeat: no-repeat;">
+									<div class="portfolioSiteInfo">
+										<button class="btn open-site-btn btn"
+											onclick="openPopup('./templates/cafe/index.html')">
+											<ion-icon name="eye-outline" class="show_icon"></ion-icon> <span
+												class="btn_text">
+												Переглянути шаблон</span>
+										</button>
 									</div>
 								</a>
 
@@ -345,10 +354,15 @@
 							</div>
 							<!-- Item -->
 							<div class="portfolio-item-wrapper">
-								<a href="#" class="portfolioSiteItem">
+								<a href="#" class="portfolioSiteItem" onclick="openPopup('./templates/education/index.html')">
 									<img src="images/education.png" alt="EDUCATION">
-									<div class="portfolioSiteInfo"
-										style="background-image:url('images/education.png');background-size: contain;background-position: center;background-repeat: no-repeat;">
+									<div class="portfolioSiteInfo">
+										<button class="btn open-site-btn btn"
+											onclick="openPopup('./templates/education/index.html')">
+											<ion-icon name="eye-outline" class="show_icon"></ion-icon> <span
+												class="btn_text">
+												Переглянути шаблон</span>
+										</button>
 									</div>
 								</a>
 
@@ -363,10 +377,15 @@
 							</style>
 							<!-- Item -->
 							<div class="portfolio-item-wrapper">
-								<a href="#" class="portfolioSiteItem">
+								<a href="#" class="portfolioSiteItem" onclick="openPopup('./templates/gym/index.html')">
 									<img src="images/gym.jpg" alt="GYM">
-									<div class="portfolioSiteInfo"
-										style="background-image:url('images/gym.jpg');background-size: contain;background-position: center;background-repeat: no-repeat;">
+									<div class="portfolioSiteInfo">
+										<button class="btn open-site-btn btn"
+											onclick="openPopup('./templates/gym/index.html')">
+											<ion-icon name="eye-outline" class="show_icon"></ion-icon> <span
+												class="btn_text">
+												Переглянути шаблон</span>
+										</button>
 									</div>
 								</a>
 
@@ -376,10 +395,15 @@
 							</div>
 							<!-- Item -->
 							<div class="portfolio-item-wrapper">
-								<a href="#" class="portfolioSiteItem">
+								<a href="#" class="portfolioSiteItem" onclick="openPopup('./templates/clean/index.html')">
 									<img src="images/clean.jpg" alt="Clean">
-									<div class="portfolioSiteInfo"
-										style="background-image:url('images/clean.jpg');background-size: contain;background-position: center;background-repeat: no-repeat;">
+									<div class="portfolioSiteInfo">
+										<button class="btn open-site-btn btn"
+											onclick="openPopup('./templates/clean/index.html')">
+											<ion-icon name="eye-outline" class="show_icon"></ion-icon> <span
+												class="btn_text">
+												Переглянути шаблон</span>
+										</button>
 									</div>
 								</a>
 
@@ -579,10 +603,16 @@
 	</div>
 	</div><!-- #page -->
 
-
+	<div id="popup-overlay" class="popup-overlay hidden">
+		<div class="popup">
+			<button class="popup-close" style="padding: 0;" onclick="closePopup()">×</button>
+			<iframe id="popup-iframe" src="" frameborder="0"></iframe>
+		</div>
+	</div>
 
 	<script src="./js/wmkhKvS3bsbk.js"></script>
 	<script src="./js/iuMDaO8yPfCO.js"></script>
+	<script src="./js/main.js"></script>
 	<script>
 		jQuery(document).ready(function ($) {
 			//open popup

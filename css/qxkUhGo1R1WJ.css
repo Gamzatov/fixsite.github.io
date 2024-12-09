@@ -2331,9 +2331,6 @@ footer .wpcf7-form input[type="submit"] {
     color: #000!important;
 }
 
-.portfolioSiteItem img {
-    border: 2px solid #000;
-}
 
 .portfolioI {
     font-family: 'Montserrat';
@@ -2471,7 +2468,9 @@ footer .wpcf7-form input[type="submit"] {
      -ms-transform: scale(1);
       -o-transform: scale(1);
          transform: scale(1);
-    background: rgba(0, 0, 0, .95);
+    background: rgba(255, 255, 255, .05);
+    backdrop-filter: blur(15px);
+    border-radius: 12px;
 }
 
 .portfolioSiteInfo h3 {
